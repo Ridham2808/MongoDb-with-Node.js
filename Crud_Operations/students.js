@@ -1,7 +1,7 @@
+
 const express = require('express');
-const cors = require("cors");
-app.use(cors());
 const { MongoClient } = require('mongodb');
+const cors = require("cors");
 
 const app = express();
 const port = 3000;
@@ -12,6 +12,7 @@ const uri = "mongodb+srv://test:test123@cluster0.i9vhn.mongodb.net/"
 const dbName = "codinggita";
 
 // Middleware
+app.use(cors());
 app.use(express.json());
 
 let db, students;
